@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carteira", "Carteira\Carteira.csproj", "{1120F7CA-B6E0-4372-9F0A-8A332DB7A33C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaronteCore", "..\CaronteCore\CaronteCore\CaronteCore.csproj", "{543CC30B-5398-498C-B669-79C81491052C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaronteCore", "..\CaronteCore\CaronteCore.csproj", "{543CC30B-5398-498C-B669-79C81491052C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

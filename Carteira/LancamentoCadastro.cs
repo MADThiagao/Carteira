@@ -104,7 +104,9 @@ namespace Carteira
         {
             try
             {
-                RequestHelper.Post<Lancamento>("Lancamento", GerarLancamento());
+                RequestHelper.Post<Lancamento>("Lancamento","Adicionar", GerarLancamento());
+                MessageBox.Show("Lancamento adicionado com sucesso!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             catch (Exception ex)
             {

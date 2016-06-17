@@ -59,7 +59,7 @@ namespace Carteira
 
             try
             {
-                var usuario = RequestHelper.Post<Usuario>("Usuario", new LoginDTO() { Login = txtUsuario.Text, Senha = txtSenha.Text });
+                var usuario = RequestHelper.Post<Usuario>("Usuario", "Logar", new LoginDTO() { Login = txtUsuario.Text, Senha = txtSenha.Text });
 
                 if (usuario == null)
                     MessageBox.Show("Usuário ou senha não encontrados!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

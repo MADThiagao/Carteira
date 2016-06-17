@@ -122,12 +122,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CaronteCore\CaronteCore\CaronteCore.csproj">
-      <Project>{543cc30b-5398-498c-b669-79c81491052c}</Project>
-      <Name>CaronteCore</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\carteira.png" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +147,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CaronteCore\CaronteCore.csproj">
+      <Project>{543cc30b-5398-498c-b669-79c81491052c}</Project>
+      <Name>CaronteCore</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
