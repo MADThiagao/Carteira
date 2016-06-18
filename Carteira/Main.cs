@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraLayout.Utils;
 using CaronteCore.Utils;
 using CaronteCore.Models;
+using CaronteCore.Models.DTO;
+using DevExpress.XtraCharts;
 
 namespace Carteira
 {
@@ -23,7 +25,9 @@ namespace Carteira
             InitializeComponent();
 
             _usuario = usuario;
-           
+
+            CarregaGraficoLinha();
+
             CarregaLancamento();
         }
 
@@ -53,6 +57,26 @@ namespace Carteira
             {
                 MessageBox.Show("Método CarregaLancamento: " + ex.ToString(), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void CarregaGraficoLinha()
+        {
+            try
+            {
+                var grafico = RequestHelper.Post<List<GraficoLinhaDTO>>("Lancamento", "RecuperarGraficoLinha", _usuario);
+
+                if (grafico != null)
+                {
+
+                    ChartLinha.DataSource = grafico;
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Método CarregaLancamento: " + ex.ToString(), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void AddLancamento_Click(object sender, EventArgs e)

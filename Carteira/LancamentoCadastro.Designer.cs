@@ -307,7 +307,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 176);
+            this.ClientSize = new System.Drawing.Size(380, 215);
             this.Controls.Add(this.layoutControl1);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(380, 215);
