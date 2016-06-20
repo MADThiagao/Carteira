@@ -88,6 +88,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CategoriaCadastro.resx">
+      <DependentUpon>CategoriaCadastro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LancamentoCadastro.resx">
       <DependentUpon>LancamentoCadastro.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +111,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\CaronteCore.Models.DTO.GraficoDonutDTO.datasource" />
     <None Include="Properties\DataSources\CaronteCore.Models.DTO.GraficoLinhaDTO.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -127,9 +131,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\carteira128.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\background.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background2.png" />
@@ -157,6 +158,42 @@
       <Project>{543cc30b-5398-498c-b669-79c81491052c}</Project>
       <Name>CaronteCore</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\External-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Internal-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pencil-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit-24%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit-24%284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -36,7 +36,7 @@ namespace Carteira
             else
             {
                 Text = "Editar Lançamento";
-                CarregaLancamento(lancamento.Id);
+                CarregaDados(lancamento);
             }
 
         }
@@ -45,40 +45,29 @@ namespace Carteira
         {
             try
             {
-              /*  var listaCategoria = RequestHelper.Get<List<Categoria>>("Categoria", "");
+                var listaCategoria = RequestHelper.Get<List<Categoria>>("Categoria", "BuscarTodos", _usuario.Id);
 
                 if (listaCategoria?.Any() == true)
-                    cboCategoria.Properties.DataSource = listaCategoria;
-                    */
+                    cboCategoria.Properties.DataSource = listaCategoria.Where(x => x.Descricao != "Sem Categoria").ToList();
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Método CarregaCategoria: " + ex.ToString(), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void CarregaLancamento(int Id)
-        {
-            try
-            {
-            //    var lancamento = RequestHelper.Get<Lancamento>("Lancamento", Id);
-             //   CarregaDados(lancamento);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Método CarregaLancamento: " + ex.ToString(), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
+       
         private void CarregaDados(Lancamento lancamento)
         {
             txtDescricao.Text = lancamento.Descricao;
             txtValor.Text = lancamento.Valor.ToString();
             dtData.EditValue = lancamento.Data;
-            cboCategoria.EditValue = lancamento.IdCategoria;
-            rdTipo.EditValue = lancamento.Tipo == "D" ? "R" : "D";
-        }
 
+            var categoria = ((List<Categoria>)cboCategoria.Properties.DataSource).Where(x => x.Id == (int)lancamento.IdCategoria).SingleOrDefault();
+            cboCategoria.EditValue = categoria == null ? null : (int?)categoria.Id;
+
+            rdTipo.EditValue = lancamento.Tipo == "D" ? "D" : "R";
+        }
 
         private bool Valida()
         {
@@ -104,23 +93,22 @@ namespace Carteira
         {
             try
             {
-                RequestHelper.Post<Lancamento>("Lancamento","Adicionar", GerarLancamento());
-                MessageBox.Show("Lancamento adicionado com sucesso!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                if(_lancamento != null)
+                    RequestHelper.Post<Lancamento>("Lancamento", "Atualizar", GerarLancamento());
+                else
+                    RequestHelper.Post<Lancamento>("Lancamento", "Adicionar", GerarLancamento());
+
+                MessageBox.Show("Lancamento salvo com sucesso!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Método Adicionar: " + ex.ToString(), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Método Salvar: " + ex.ToString(), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            if (Valida())
-                Salvar();
-        }
-        
         private Lancamento GerarLancamento()
         {
             int? idCategoria;
@@ -142,8 +130,19 @@ namespace Carteira
             };
         }
 
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            if (Valida())
+            {
+                Salvar();
+                DialogResult = DialogResult.OK;
+            }
+                
+        }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.Cancel;
             Close();
         }
     }
