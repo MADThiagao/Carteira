@@ -12,6 +12,7 @@ using CaronteCore.Utils;
 using CaronteCore.Models;
 using CaronteCore.Models.DTO;
 using DevExpress.XtraCharts;
+using Carteira.Properties;
 
 namespace Carteira
 {
@@ -26,16 +27,15 @@ namespace Carteira
 
             _usuario = usuario;
 
+            lcGroupMenu.Visibility = LayoutVisibility.Never;
+
             CarregaGraficoLinha();
 
             CarregaGraficoDonut();
 
             CarregaLancamento();
-        }
 
-        private void IcoMenu_Click(object sender, EventArgs e)
-        {
-            lcGroupMenu.Visibility = lcGroupMenu.Visibility == LayoutVisibility.Always ? LayoutVisibility.Never : LayoutVisibility.Always;
+            Totais();
         }
 
         private void CarregaLancamento()
@@ -112,7 +112,23 @@ namespace Carteira
 
         private void gvLancamento_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
         {
-            var k = e;
+            if (e.Column.Name != TipoImagem.Name || !e.IsGetData)
+                return;
+
+            var lancamento = e.Row as Lancamento;
+
+            if (lancamento == null) return;
+
+            if (lancamento.Tipo == "R")
+            {
+                e.Value = Resources.SortDown_16;
+            }
+            else
+            {
+                e.Value = Resources.SortUp_16;
+            }
+
+
         }
 
         private void btnGridRemover_Click(object sender, EventArgs e)
@@ -141,6 +157,7 @@ namespace Carteira
             CarregaLancamento();
             CarregaGraficoLinha();
             CarregaGraficoDonut();
+            Totais();
         }
 
         private void btnGridAdicionar_Click(object sender, EventArgs e)
@@ -232,5 +249,43 @@ namespace Carteira
             }
         }
 
+        private void btnHMenu_Click(object sender, EventArgs e)
+        {
+            lcGroupMenu.Visibility = lcGroupMenu.Visibility == LayoutVisibility.Always ? LayoutVisibility.Never : LayoutVisibility.Always;
+        }
+
+        private void Totais(List<Lancamento> listaMesPassado = null)
+        {
+            
+            decimal gasto = 0, ganho = 0;
+
+            if (gcLancamento.DataSource != null)
+            {
+                gasto = ((List<Lancamento>)(gcLancamento.DataSource)).Where(x => x.Tipo == "D").Select(x => x.Valor).Sum();
+                ganho = ((List<Lancamento>)(gcLancamento.DataSource)).Where(x => x.Tipo == "R").Select(x => x.Valor).Sum();
+            }
+                        
+            lblTotalGasto.Text = string.Format("R$ {0:0.##}", gasto); 
+            lblTotalGanho.Text = string.Format("R$ {0:0.##}", ganho);
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.ShowDialog();
+            this.Close();
+        }
+
+        private void AddCategoria_Click(object sender, EventArgs e)
+        {
+            using (CategoriaCadastro cadastro = new CategoriaCadastro(_usuario, null))
+            {
+                DialogResult resultado = cadastro.ShowDialog();
+                if (resultado == DialogResult.OK)
+                    DashReloader();
+            }
+        }
     }
 }

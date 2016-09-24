@@ -63,49 +63,9 @@ namespace Carteira.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap add_18 {
-            get {
-                object obj = ResourceManager.GetObject("add_18", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap background2 {
-            get {
-                object obj = ResourceManager.GetObject("background2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap background3 {
-            get {
-                object obj = ResourceManager.GetObject("background3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Cancel_24 {
             get {
                 object obj = ResourceManager.GetObject("Cancel-24", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap carteira {
-            get {
-                object obj = ResourceManager.GetObject("carteira", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +83,9 @@ namespace Carteira.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Delete_16 {
+        internal static System.Drawing.Bitmap carteira2 {
             get {
-                object obj = ResourceManager.GetObject("Delete-16", resourceCulture);
+                object obj = ResourceManager.GetObject("carteira2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +93,9 @@ namespace Carteira.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Delete_24 {
+        internal static System.Drawing.Bitmap Edit_24 {
             get {
-                object obj = ResourceManager.GetObject("Delete-24", resourceCulture);
+                object obj = ResourceManager.GetObject("Edit-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +103,9 @@ namespace Carteira.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Edit_16 {
+        internal static System.Drawing.Bitmap Enter_24 {
             get {
-                object obj = ResourceManager.GetObject("Edit-16", resourceCulture);
+                object obj = ResourceManager.GetObject("Enter-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +113,9 @@ namespace Carteira.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Edit_24_2_ {
+        internal static System.Drawing.Bitmap Logout_Rounded_24 {
             get {
-                object obj = ResourceManager.GetObject("Edit-24(2)", resourceCulture);
+                object obj = ResourceManager.GetObject("Logout Rounded-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,59 +123,9 @@ namespace Carteira.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Edit_24_4_ {
+        internal static System.Drawing.Bitmap Menu_24 {
             get {
-                object obj = ResourceManager.GetObject("Edit-24(4)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap External_16 {
-            get {
-                object obj = ResourceManager.GetObject("External-16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap hamburger {
-            get {
-                object obj = ResourceManager.GetObject("hamburger", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Internal_16 {
-            get {
-                object obj = ResourceManager.GetObject("Internal-16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap menu {
-            get {
-                object obj = ResourceManager.GetObject("menu", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap menu_24 {
-            get {
-                object obj = ResourceManager.GetObject("menu_24", resourceCulture);
+                object obj = ResourceManager.GetObject("Menu_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +143,9 @@ namespace Carteira.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Pencil_32 {
+        internal static System.Drawing.Bitmap Plus_24 {
             get {
-                object obj = ResourceManager.GetObject("Pencil-32", resourceCulture);
+                object obj = ResourceManager.GetObject("Plus-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +153,39 @@ namespace Carteira.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Plus_24 {
+        internal static System.Drawing.Bitmap SortDown_16 {
             get {
-                object obj = ResourceManager.GetObject("Plus-24", resourceCulture);
+                object obj = ResourceManager.GetObject("SortDown_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SortDown_24 {
+            get {
+                object obj = ResourceManager.GetObject("SortDown-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SortUp_16 {
+            get {
+                object obj = ResourceManager.GetObject("SortUp_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SortUp_24 {
+            get {
+                object obj = ResourceManager.GetObject("SortUp-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

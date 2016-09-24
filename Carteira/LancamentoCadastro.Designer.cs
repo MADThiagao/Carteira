@@ -30,8 +30,6 @@
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSalvar = new DevExpress.XtraEditors.SimpleButton();
             this.dtData = new DevExpress.XtraEditors.DateEdit();
             this.rdTipo = new DevExpress.XtraEditors.RadioGroup();
             this.cboCategoria = new DevExpress.XtraEditors.LookUpEdit();
@@ -47,6 +45,8 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSalvar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -100,68 +100,36 @@
             this.panelControl1.Size = new System.Drawing.Size(360, 40);
             this.panelControl1.TabIndex = 11;
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.Appearance.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.Appearance.Options.UseBackColor = true;
-            this.btnCancelar.Appearance.Options.UseForeColor = true;
-            this.btnCancelar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnCancelar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnCancelar.Image = global::Carteira.Properties.Resources.Cancel_24;
-            this.btnCancelar.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(0, 0);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(38, 40);
-            this.btnCancelar.TabIndex = 2;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalvar.Appearance.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSalvar.Appearance.Options.UseBackColor = true;
-            this.btnSalvar.Appearance.Options.UseForeColor = true;
-            this.btnSalvar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnSalvar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSalvar.Image = global::Carteira.Properties.Resources.Ok_24;
-            this.btnSalvar.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnSalvar.Location = new System.Drawing.Point(322, 0);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(38, 40);
-            this.btnSalvar.TabIndex = 1;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
             // dtData
             // 
             this.dtData.EditValue = null;
-            this.dtData.Location = new System.Drawing.Point(237, 29);
+            this.dtData.Location = new System.Drawing.Point(237, 33);
             this.dtData.Name = "dtData";
             this.dtData.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtData.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtData.Size = new System.Drawing.Size(124, 20);
+            this.dtData.Size = new System.Drawing.Size(120, 20);
             this.dtData.StyleController = this.layoutControl1;
             this.dtData.TabIndex = 10;
             // 
             // rdTipo
             // 
             this.rdTipo.EditValue = "R";
-            this.rdTipo.Location = new System.Drawing.Point(57, 81);
+            this.rdTipo.Location = new System.Drawing.Point(61, 85);
             this.rdTipo.Name = "rdTipo";
             this.rdTipo.Properties.Columns = 2;
             this.rdTipo.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
             this.rdTipo.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("R", "Receita"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("D", "Despesa")});
-            this.rdTipo.Size = new System.Drawing.Size(304, 25);
+            this.rdTipo.Size = new System.Drawing.Size(296, 25);
             this.rdTipo.StyleController = this.layoutControl1;
             this.rdTipo.TabIndex = 9;
             // 
             // cboCategoria
             // 
-            this.cboCategoria.Location = new System.Drawing.Point(57, 55);
+            this.cboCategoria.Location = new System.Drawing.Point(61, 59);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -173,24 +141,25 @@
             this.cboCategoria.Properties.ShowFooter = false;
             this.cboCategoria.Properties.ShowHeader = false;
             this.cboCategoria.Properties.ValueMember = "Id";
-            this.cboCategoria.Size = new System.Drawing.Size(304, 20);
+            this.cboCategoria.Size = new System.Drawing.Size(296, 20);
             this.cboCategoria.StyleController = this.layoutControl1;
             this.cboCategoria.TabIndex = 8;
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(57, 29);
+            this.txtValor.Location = new System.Drawing.Point(61, 33);
             this.txtValor.Name = "txtValor";
+            this.txtValor.Properties.Mask.EditMask = "#,##0.00;";
             this.txtValor.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtValor.Size = new System.Drawing.Size(120, 20);
+            this.txtValor.Size = new System.Drawing.Size(116, 20);
             this.txtValor.StyleController = this.layoutControl1;
             this.txtValor.TabIndex = 7;
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(57, 3);
+            this.txtDescricao.Location = new System.Drawing.Point(61, 7);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(304, 20);
+            this.txtDescricao.Size = new System.Drawing.Size(296, 20);
             this.txtDescricao.StyleController = this.layoutControl1;
             this.txtDescricao.TabIndex = 6;
             // 
@@ -232,6 +201,7 @@
             // lcGrupo
             // 
             this.lcGrupo.CustomizationFormText = "layoutControlGroup3";
+            this.lcGrupo.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.lcGrupo.GroupBordersVisible = false;
             this.lcGrupo.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.emptySpaceItem2,
@@ -242,9 +212,8 @@
             this.layoutControlItem7});
             this.lcGrupo.Location = new System.Drawing.Point(0, 0);
             this.lcGrupo.Name = "lcGrupo";
-            this.lcGrupo.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
+            this.lcGrupo.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
             this.lcGrupo.Size = new System.Drawing.Size(364, 134);
-            this.lcGrupo.Spacing = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
             this.lcGrupo.Text = "Cadastro de Lancamento";
             // 
             // emptySpaceItem2
@@ -253,7 +222,7 @@
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 109);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
             this.emptySpaceItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
-            this.emptySpaceItem2.Size = new System.Drawing.Size(364, 25);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(356, 17);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
@@ -261,7 +230,7 @@
             this.layoutControlItem3.Control = this.txtDescricao;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(364, 26);
+            this.layoutControlItem3.Size = new System.Drawing.Size(356, 26);
             this.layoutControlItem3.Spacing = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutControlItem3.Text = "Descrição:";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(51, 13);
@@ -271,7 +240,7 @@
             this.layoutControlItem4.Control = this.txtValor;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 26);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(180, 26);
+            this.layoutControlItem4.Size = new System.Drawing.Size(176, 26);
             this.layoutControlItem4.Spacing = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutControlItem4.Text = "Valor:";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(51, 13);
@@ -281,7 +250,7 @@
             this.layoutControlItem5.Control = this.cboCategoria;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 52);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(364, 26);
+            this.layoutControlItem5.Size = new System.Drawing.Size(356, 26);
             this.layoutControlItem5.Spacing = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutControlItem5.Text = "Categoria:";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(51, 13);
@@ -291,7 +260,7 @@
             this.layoutControlItem6.Control = this.rdTipo;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 78);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(364, 31);
+            this.layoutControlItem6.Size = new System.Drawing.Size(356, 31);
             this.layoutControlItem6.Spacing = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutControlItem6.Text = "Tipo:";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(51, 13);
@@ -299,12 +268,44 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.dtData;
-            this.layoutControlItem7.Location = new System.Drawing.Point(180, 26);
+            this.layoutControlItem7.Location = new System.Drawing.Point(176, 26);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(184, 26);
+            this.layoutControlItem7.Size = new System.Drawing.Size(180, 26);
             this.layoutControlItem7.Spacing = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutControlItem7.Text = "Data:";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(51, 13);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.Appearance.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.Appearance.Options.UseBackColor = true;
+            this.btnCancelar.Appearance.Options.UseForeColor = true;
+            this.btnCancelar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnCancelar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCancelar.Image = global::Carteira.Properties.Resources.Cancel_24;
+            this.btnCancelar.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnCancelar.Location = new System.Drawing.Point(0, 0);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(38, 40);
+            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalvar.Appearance.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSalvar.Appearance.Options.UseBackColor = true;
+            this.btnSalvar.Appearance.Options.UseForeColor = true;
+            this.btnSalvar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnSalvar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSalvar.Image = global::Carteira.Properties.Resources.Ok_24;
+            this.btnSalvar.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnSalvar.Location = new System.Drawing.Point(322, 0);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(38, 40);
+            this.btnSalvar.TabIndex = 1;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // LancamentoCadastro
             // 

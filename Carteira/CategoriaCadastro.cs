@@ -26,7 +26,12 @@ namespace Carteira
 
             if (categoria != null)
             {
+                Text = "Editar Categoria";
                 txtDescricao.Text = categoria.Descricao;
+            }
+            else
+            {
+                Text = "Cadastrar Categoria";
             }
 
         }

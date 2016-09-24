@@ -49,8 +49,7 @@ namespace Carteira
             if (Valida())
             {
               Logar();
-               // Main k = new Main();
-              //  k.ShowDialog();
+                
             }
         }
 
@@ -65,7 +64,9 @@ namespace Carteira
                     MessageBox.Show("Usuário ou senha não encontrados!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else
                 {
-
+                    Main main = new Main(usuario);
+                    this.Hide();
+                    main.ShowDialog();
                     this.Close();
                 }
 
